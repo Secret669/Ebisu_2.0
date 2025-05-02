@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P2</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" href="image/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style_for.css" />
+    <style>
+      /* Add styles for the modal */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 800px;
+        text-align: center;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+      }
+      
+      .modal-content iframe {
+        width: 100%;
+        height: 450px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+
+     <!-- Header -->
+     <header class="sticky-header">
+        <div class="container_header">
+          <div class="atributs">
+            <img src="image/logo_corect.jpg" alt="logo" class="logo_image" />
+            <a href="index.html" class="logo">Ebisu</a>
+          </div>
+
+          <!-- Меню навігації -->
+          <nav>
+            <div class="menu-toggle" id="mobile-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <ul class="nav-list">
+              <li><a href="/index.html">Головна</a></li>
+              <li><a href="/p2.html?category=all">Магазин</a></li>
+              <li><a href="/news.html">Новини</a></li>
+              <li><a href="/index.html#contacts">Контакти</a></li>
+              <li class="cart-icon">
+                <a href="#cart" id="cart-btn">
+                  <img src="image/cart.png" alt="Кошик" class="cart_image" />
+                  <span class="cart-count">0</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+    <div class="checkout-container">
+
+      <div class="checkout-page">
+        <h1>Замовити</h1>
+
+        <div class="main-content">
+          <!-- Ліва колонка -->
+          <div class="left-column">
+            <!-- Контактні дані -->
+            <div class="section">
+              <h2>Контактні дані</h2>
+              <input type="tel" placeholder="Введіть ваш номер" />
+              <input type="text" placeholder="Введіть ваше прізвище" />
+              <input type="text" placeholder="Введіть ваше ім'я" />
+              <button>Продовжити</button>
+            </div>
+
+            <!-- Дані про доставку -->
+            <div class="section">
+              <h2>Дані про доставку</h2>
+              <label><input type="radio" name="delivery" /> Нова пошта</label>
+              <label><input type="radio" name="delivery" /> Укрпошта</label>
+              <input type="text" placeholder="Введіть номер відділення" />
+              <button>Продовжити</button>
+            </div>
+
+            <!-- Дані про оплату -->
+            <div class="section">
+              <h2>Дані про оплату</h2>
+              <label><input type="radio" name="payment" /> Післяплата</label>
+              <label><input type="radio" name="payment" /> Оплата картою</label>
+              <input type="text" placeholder="Введіть номер карти" />
+              <input type="text" placeholder="Введіть термін дії" />
+              <input type="text" placeholder="Введіть CVV" />
+              <button>Продовжити</button>
+            </div>
+          </div>
+
+          <!-- Права колонка -->
+          <div class="right-column">
+            <!-- Товари -->
+            <div class="order-summary">
+              <div class="header">
+                <h2>Замовлення</h2>
+                <a href="#">Всі товари</a>
+              </div>
+              <div class="item">
+                <img src="product.jpg" alt="Товар" />
+                <div class="details">
+                  <p>Каблучка Magerit WATER</p>
+                  <p>583101 грн</p>
+                  <p>× 2</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Вартість -->
+            <div class="order-total">
+              <button id="order-button">Оформити замовлення</button>
+            </div>
+
+            <!-- Промокод -->
+            <div class="promo-code">
+              <input type="text" placeholder="Введіть ваш промокод" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </section>
+    </div>
+ <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h3>Ebisu</h3>
+            <p>Ти носиш не просто коштовності, ти носиш моменти</p>
+          </div>
+          <div class="footer-col">
+            <h3>Меню</h3>
+            <ul>
+              <li><a href="#home">Головна</a></li>
+              <li><a href="#products">Наша продукція</a></li>
+              <li><a href="#contacts">Контакти</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Контакти</h3>
+            <p>м. Рівне, Рівненська обл.</p>
+            <p>artem999popov@gmail.com</p>
+            <p>+380 99 151 83 44</p>
+          </div>
+          <div class="footer-col">
+            <h3>Підписатись</h3>
+            <form class="subscribe-form">
+              <input type="email" placeholder="Ваш email" required />
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Ebisu. Всі права захищені за допомого GodHelp.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+      <div class="cart-header">
+        <h3>Ваше замовлення</h3>
+        <button class="close-cart">&times;</button>
+      </div>
+      <div class="cart-items" id="cart-items">
+        <!-- Cart items will be added here via JS -->
+      </div>
+      <div class="cart-total">
+        <p>Всього: <span id="cart-total">0</span></p>
+        <button class="btn">Оформити замовлення</button>
+      </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/sorting.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+          const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+          const orderSummary = document.querySelector(".order-summary");
+
+          if (cartItems.length === 0) {
+            orderSummary.innerHTML = "<p>Кошик порожній</p>";
+            return;
+          }
+
+          const response = await fetch("products.json");
+          const data = await response.json();
+          const allProducts = data.products;
+
+          let total = 0;
+          let output = "";
+
+          cartItems.forEach(item => {
+            const product = allProducts.find(p => p.id == item.id);
+            if (!product) return;
+
+            const subtotal = product.price * item.quantity;
+            total += subtotal;
+
+            output += `
+              <div class="item">
+                <img src="${product.image}" alt="${product.name}">
+                <div>
+                  <p>${product.name}</p>
+                  <p>${product.price} грн × ${item.quantity}</p>
+                  <strong>${subtotal} грн</strong>
+                </div>
+              </div>
+            `;
+          });
+
+          orderSummary.innerHTML = output + `<hr><p>Разом: <strong>${total} грн</strong></p>`;
+        });
+    </script>
+
+    <!-- Modal for YouTube Video -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe id="orderVideo" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <script>
+      // Get the modal
+      const modal = document.getElementById("myModal");
+      
+      // Get the button that opens the modal
+      const orderButton = document.getElementById("order-button");
+      
+      // Get the <span> element that closes the modal
+      const span = document.getElementsByClassName("close")[0];
+
+      // Function to open modal with autoplay
+      function openModal() {
+        const iframe = document.getElementById("orderVideo");
+        iframe.src = "https://www.youtube.com/embed/T_j3TAMNp_M?autoplay=1&mute=1";
+        modal.style.display = "block";
+      }
+
+      // When the user clicks the order button, open the modal 
+      orderButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal();
+      });
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+        const iframe = document.getElementById("orderVideo");
+        iframe.src = "";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          const iframe = document.getElementById("orderVideo");
+          iframe.src = "";
+        }
+      }
+    </script>
+  </body>
+</html>

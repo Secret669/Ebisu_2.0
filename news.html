@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новини</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" href="image/icon.png" type="image/x-icon" />
+</head>
+<body>
+    <body>
+        <!-- Header -->
+        <header class="sticky-header">
+          <div class="container_header">
+            <div class="atributs">
+              <img src="image/logo_corect.jpg" alt="logo" class="logo_image" />
+              <a href="index.html" class="logo">Ebisu</a>
+            </div>
+    
+            <!-- Меню навігації -->
+            <nav>
+              <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <ul class="nav-list">
+                <li><a href="/index.html">Головна</a></li>
+                <li><a href="/p2.html?category=all">Магазин</a></li>
+                <li><a href="/news.html">Новини</a></li>
+                <li><a href="/index.html#contacts">Контакти</a></li>
+                <li class="cart-icon">
+                  <a href="#cart" id="cart-btn">
+                    <img src="image/cart.png" alt="Кошик" class="cart_image" />
+                    <span class="cart-count">0</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+        <section class="promo-articles">
+            <div class="promo-container">
+              <div class="promo-card">
+                <img src="/image/news-1.jpg" alt="Знижка 20%">
+                <div class="promo-text">
+                  <h3 class="promo-title">Знижка 20%</h3>
+                  <p class="promo-description">
+                    Спеціальна пропозиція на всі ювелірні вироби з нашої колекції!...<br>
+                    Краса — в деталях. Обирай з любов'ю.
+                  </p>
+                  <span class="promo-date">29.04.2025</span>
+                </div>
+              </div>
+          
+              <div class="promo-card">
+                <img src="/image/news-2.jpg" alt="Buy one? get the second">
+                <div class="promo-text">
+                  <h3 class="promo-title">Buy one? get the second</h3>
+                  <p class="promo-description">
+                    Подвійна краса — подвійна вигода!...<br>
+                    Акція до вичерпання!
+                  </p>
+                  <span class="promo-date">24.04.2025</span>
+                </div>
+              </div>
+          
+              <div class="promo-card">
+                <img src="/image/news-3.jpg" alt="Ексклюзивний подарунковий набір">
+                <div class="promo-text">
+                  <h3 class="promo-title">Ексклюзивний подарунковий набір</h3>
+                  <p class="promo-description">
+                    Шукаєте подарунок, що говорить замість слів?...<br>
+                    Даруйте з захватом.
+                  </p>
+                  <span class="promo-date">17.04.2025</span>
+                </div>
+              </div>
+          
+              <div class="promo-card">
+                <img src="/image/news-4.jpg" alt="Знижки на обручальні каблучки">
+                <div class="promo-text">
+                  <h3 class="promo-title">Знижки на обручальні каблучки</h3>
+                  <p class="promo-description">
+                    Ми знаємо любов не має меж...<br>
+                    Знижки до кінця місяця.
+                  </p>
+                  <span class="promo-date">15.04.2025</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          
+ <!-- Footer -->
+ <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Ebisu</h3>
+          <p>Ти носиш не просто коштовності, ти носиш моменти</p>
+        </div>
+        <div class="footer-col">
+          <h3>Меню</h3>
+          <ul>
+            <li><a href="#home">Головна</a></li>
+            <li><a href="#products">Наша продукція</a></li>
+            <li><a href="#contacts">Контакти</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Контакти</h3>
+          <p>м. Рівне, Рівненська обл.</p>
+          <p>artem999popov@gmail.com</p>
+          <p>+380 99 151 83 44</p>
+        </div>
+        <div class="footer-col">
+          <h3>Підписатись</h3>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Ваш email" required />
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ebisu. Всі права захищені за допомого GodHelp.</p>
+      </div>
+    </div>
+  </footer>
+
+  
+
+  <!-- Shopping Cart Sidebar -->
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Ваше замовлення</h3>
+      <button class="close-cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <!-- Cart items will be added here via JS -->
+    </div>
+    <div class="cart-total">
+      <p>Всього: <span id="cart-total">0</span></p>
+      <button class="btn">Оформити замовлення</button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/sorting.js"></script>
+</body>
+</html>

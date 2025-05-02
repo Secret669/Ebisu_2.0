@@ -1,0 +1,1075 @@
+/* Base Styles */
+:root {
+  --primary-color: #136453;
+  --secondary-color: #457b9d;
+  --dark-color: #1d3557;
+  --light-color: #f1faee;
+  --text-color: #136453;
+  --text-light: #777;
+  --white: #fff;
+  --black: #000;
+  --gray: #f5f5f5;
+  --title-after: rgba(85, 195, 190, 1);
+  --price-color: rgba(79, 20, 87, 1);
+  --tlo-color: #f9f0ff;
+  --btn-color: rgba(126, 80, 132, 1);
+  --transition: all 0.3s ease;
+  --btn-hover-color: rgb(199, 89, 213);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: var(--tlo-color);
+}
+
+.slogan {
+  position: absolute;
+  margin-top: 8%;
+  text-align: right;
+  width: 40%;
+  margin-left: 58%;
+  font-family: "Italianno", cursive;
+  color: white;
+  font-size: 43px !important;
+}
+.slogan_ukr {
+  position: absolute;
+  margin-top: 23%;
+  margin-left: 68%;
+  width: 30%;
+  text-align: right;
+  color: white;
+  font-family: cursive;
+  font-size: 20px !important;
+  letter-spacing: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container_header {
+  width: 90%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--btn-color);
+  color: var(--white);
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline {
+  display: inline-block;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--title-after);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Header */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--tlo-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.sticky-header.scrolled {
+  background-color: var(--tlo-color);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: "Playfair Display", serif;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list li {
+  margin-left: 30px;
+  position: relative;
+}
+
+.nav-list a {
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-list a:hover {
+  color: var(--primary-color);
+}
+
+.cart-icon {
+  position: relative;
+  margin-left: 30px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1.7;
+}
+
+/* 
+ДЛЯ ПОЛОМАНОГО ВАРІАНТУ(Вируби функцію з 166 по 170 лайн в cart.js)
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+} */
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url(/image/crystal.png);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  z-index: 100;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.logo_image {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  object-fit: contain;
+}
+
+.cart_image {
+  width: 30px;
+  height: 30px;
+}
+
+.atributs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Featured Products */
+.featured-products {
+  padding: 100px 0;
+  background-color: var(--tlo-color);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+  align-items: start; /* Додано для коректного вирівнювання */
+}
+
+.product-card {
+  position: relative;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden; /* Залишаємо hidden для обрізання зайвих ефектів */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  height: auto; /* Дозволяємо блоку змінювати висоту */
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  z-index: 2; /* Піднімаємо картку над іншими при наведенні */
+}
+
+.product-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 20px;
+  transition: var(--transition);
+}
+
+.product-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--price-color);
+  margin-bottom: 15px;
+}
+
+/* Стилі для додаткової інформації */
+.product-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding: 0 20px;
+  background-color: var(--white);
+}
+
+.product-card:hover .product-details {
+  max-height: 500px; /* Максимальна висота, якої має досягти блок */
+  padding: 0 20px 20px;
+}
+
+.product-details p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.2s; /* Затримка появи тексту */
+}
+
+.product-card:hover .product-details p {
+  opacity: 1;
+}
+
+.product-details strong {
+  color: var(--primary-color);
+}
+
+.add-to-cart {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--btn-color);
+  color: var(--white);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.add-to-cart:hover {
+  background-color: var(--primary-color);
+}
+
+/* Blog Section */
+.blog-section {
+  position: relative;
+  padding: 100px 0;
+  background-color: var(--tlo-color);
+}
+
+.blog-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.blog-grid {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+  flex-wrap: nowrap;
+  gap: 30px;
+  margin-top: 50px;
+  padding-bottom: 20px; /* Додаємо відступ для кнопок */
+}
+
+.blog-card {
+  flex: 0 0 calc(50% - 15px); /* Використовуємо flex-basis замість min-width */
+  box-sizing: border-box;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.blog-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.blog-card:hover .blog-image img {
+  transform: scale(1.05);
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.blog-date {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.blog-excerpt {
+  margin-bottom: 15px;
+}
+
+.read-more {
+  color: var(--primary-color);
+  font-weight: 500;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.read-more:hover {
+  color: var(--dark-color);
+}
+
+.blog-navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+  position: static; /* Залишаємо кнопки на місці */
+}
+
+.blog-prev,
+.blog-next {
+  background: var(--btn-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  position: static; /* Залишаємо кнопки на місці */
+  transform: none; /* Видаляємо трансформації */
+}
+
+.blog-prev:hover,
+.blog-next:hover {
+  background: var(--btn-hover-color);
+}
+
+.blog-prev:disabled,
+.blog-next:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+  .blog-card {
+    flex: 1 1 100%;
+  }
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 100px 0;
+  background-color: var(--tlo-color);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  margin-right: 0px;
+  /*ДЛЯ ПОЛОМАНОГО ВАРІАНТУ margin-right: 10px; */
+  color: var(--primary-color);
+  width: 20px;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  margin-top: 30px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--tlo-color);
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 80px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.footer-col h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-col h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--title-after);
+}
+
+.footer-col p {
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  opacity: 0.8;
+  transition: var(--transition);
+}
+
+.footer-col ul li a:hover {
+  opacity: 1;
+  color: var(--primary-color);
+  padding-left: 5px;
+}
+
+.subscribe-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-family: inherit;
+}
+
+.subscribe-form button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 0 15px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.subscribe-form button:hover {
+  background-color: var(--secondary-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Shopping Cart */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100%;
+  background-color: var(--white);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 1100;
+  transition: var(--transition);
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.cart-sidebar.active {
+  right: 0;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-header h3 {
+  font-size: 1.5rem;
+}
+
+.close-cart {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+.close-cart:hover {
+  color: var(--primary-color);
+}
+
+.cart-item {
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.cart-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-title {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.cart-item-price {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.cart-item-remove {
+  color: var(--text-light);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cart-item-remove:hover {
+  color: var(--primary-color);
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.quantity-btn {
+  width: 25px;
+  height: 25px;
+  background-color: var(--gray);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-input {
+  width: 40px;
+  text-align: center;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.cart-total {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  text-align: right;
+}
+
+.cart-total p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.cart-total span {
+  color: var(--primary-color);
+}
+
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.cart-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+/* Responsive styles will be in responsive.css */
+
+/* категорії */
+.categories-section {
+  background-color: var(--tlo-color);
+}
+
+/* --- Загальний стиль для всіх кнопок-категорій --- */
+.categories-section {
+  padding: 40px;
+  background-color: #f9f1ff;
+}
+
+.section-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 стовпчики */
+  grid-template-rows: repeat(2, auto); /* 2 рядки */
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.image-btn {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  color: #124336;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(255, 255, 255, 0.9);
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 280px;
+  padding: 12px;
+}
+
+/* Hover ефект */
+.image-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Індивідуальні фони */
+#all {
+  background-image: url("image/all.jpg");
+}
+
+#suspender {
+  background-image: url("image/nec.jpg");
+}
+
+#earrings {
+  background-image: url("image/earrings.jpg");
+}
+
+#bracelets {
+  background-image: url("image/braslet.jpg");
+}
+
+#rings {
+  background-image: url("image/rings.jpg");
+}
+
+#brooches {
+  background-image: url("image/brosh.jpg");
+}
+
+/*стилі для p2.html
+/* Стилі для активної кнопки */
+.category-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Контейнер для товарів */
+#products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.no-products {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 50px 0;
+}
+
+/* Новини */
+/* Секція промо-статей */
+/* Секція промо-статей */
+.promo-articles {
+  padding: 60px 0;
+  background-color: #f7eaff;
+  margin-top: 5%;
+}
+
+.promo-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Одна картка */
+.promo-card {
+  display: flex;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-height: 220px;
+}
+
+.promo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Зображення */
+.promo-card img {
+  width: 320px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+}
+
+/* Контент */
+.promo-text {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.promo-title {
+  font-size: 1.5rem;
+  color: #1e4856;
+  margin-bottom: 10px;
+}
+
+.promo-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.promo-date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: auto;
+}
+
+/* /////////////////////////////////////////////////////////////////// */
+.main-part {
+  display: flex;
+  gap: 0px;
+  padding: 40px 0px;
+  /* max-width: 1920px; */
+  margin: 0 auto;
+  background-color: var(--tlo-color);
+}
+
+/* Ліва бокова панель */
+.sort {
+  flex: 0 0 250px; /* фіксована ширина */
+  background-color: var(--tlo-color);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.sort h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.sort .sorting-group {
+  margin-bottom: 15px;
+}
+
+.sort label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.sort select {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+}
+
+#resetFilters {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: var(--btn-color);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+#resetFilters:hover {
+  background-color: var(--primary-color);
+}
+
+/* Права частина з продуктами */
+.featured-products {
+  flex: 1;
+}
+
+#col {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}

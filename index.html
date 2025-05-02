@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ebisu</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" href="image/icon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="sticky-header">
+      <div class="container_header">
+        <div class="atributs">
+          <img src="image/logo_corect.jpg" alt="logo" class="logo_image" />
+          <a href="index.html" class="logo">Ebisu</a>
+        </div>
+
+        <!-- Меню навігації -->
+        <nav>
+          <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-list">
+            <li><a href="/index.html">Головна</a></li>
+            <li><a href="/p2.html?category=all">Магазин</a></li>
+            <li><a href="/news.html">Новини</a></li>
+            <li><a href="/index.html#contacts">Контакти</a></li>
+            <li class="cart-icon">
+              <a href="#cart" id="cart-btn">
+                <img src="image/cart.png" alt="Кошик" class="cart_image" />
+                <span class="cart-count">0</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Шапка сайту -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="slogan">
+          <i>You adorn yourself not just whith jewerly, but whith memories</i>
+        </p>
+        <p class="slogan_ukr">
+          <i>Ти носиш не просто коштовності, ти носиш моменти</i>
+        </p>
+      </div>
+    </section>
+
+    <!-- Новини -->
+    <section class="blog-section" id="blog">
+      <div class="container">
+        <h2 class="section-title">Новини</h2>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="/image/news_1.jpg" alt="news_1" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <h3>Знижка 20%</h3>
+              <p class="blog-date">29.04.2025</p>
+              <p class="blog-excerpt">
+                Спеціальна пропозиція: знижка 20% на всі ювелірні вироби!
+                Широкий асортимент і вигідні ціни. Поспішайте!
+              </p>
+              <a href="/news.html" class="read-more">Читати далі</a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="/image/news_2.jpg" alt="news_2" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <h3>Buy one? get the second</h3>
+              <p class="blog-date">24.04.2025</p>
+              <p class="blog-excerpt">
+                Купуйте одну прикрасу і отримуйте другу зі знижкою 50%!
+                Оновлюйте свій гардероб за вигідною ціною. Поспішайте!
+              </p>
+              <a href="/news.html" class="read-more">Читати далі</a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="/image/news_3.jpg" alt="news_3" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <h3>Ексклюзивний подарунковий набір</h3>
+              <p class="blog-date">17.04.2025</p>
+              <p class="blog-excerpt">
+                Шукаєте ідеальний подарунок? Ми підготували ексклюзивні
+                подарункові набори, які підійдуть для будь-якого свята.
+              </p>
+              <a href="/news.html" class="read-more">Читати далі</a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="image/news_4.jpg" alt="news_4" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <h3>Знижки на обручальні каблучки</h3>
+              <p class="blog-date">12.04.2025</p>
+              <p class="blog-excerpt">
+                Ми пропонуємо спеціальні знижки на обручальні кільця!
+              </p>
+              <a href="#" class="read-more">Читати далі</a>
+            </div>
+          </article>
+        </div>
+        <div class="blog-navigation">
+          <button class="blog-prev" aria-label="Попередні новини">←</button>
+          <button class="blog-next" aria-label="Наступні новини">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Торгова частина -->
+    <section class="featured-products" id="products">
+      <div class="container">
+        <h2 class="section-title">Новинки</h2>
+        <div id="featured-products" class="products-grid"></div>
+      </div>
+    </section>
+
+    <!-- Категорії продуктів -->
+    <section class="categories-section">
+      <div class="categories-container">
+        <h2 class="section-title">Категорії</h2>
+        <div class="categories-grid">
+          <a href="p2.html?category=all" class="category-card">
+            <img src="image/all.png" alt="Всі товари" />
+          </a>
+          <a href="p2.html?category=suspender" class="category-card">
+            <img src="image/nec.jpg" alt="Підвіски" />
+          </a>
+          <a href="p2.html?category=earrings" class="category-card">
+            <img src="image/earrings.png" alt="Сережки" />
+          </a>
+          <a href="p2.html?category=bracelets" class="category-card">
+            <img src="image/braslet.png" alt="Браслети" />
+          </a>
+          <a href="p2.html?category=rings" class="category-card">
+            <img src="image/rings.jpg" alt="Каблучки" />
+          </a>
+          <a href="p2.html?category=brooches" class="category-card">
+            <img src="image/brosh.png" alt="Брошки" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакти -->
+    <section class="contact-section" id="contacts">
+      <div class="container">
+        <h2 class="section-title">Зв'яжіться з нами</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Наші контакти</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> м. Рівне, Рівненська обл.
+            </p>
+            <p><i class="fas fa-phone"></i> +380 99 151 83 44</p>
+            <p><i class="fas fa-envelope"></i> artem999popov@gmail.com</p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/profile.php?id=100051300533079"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/dorbot_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://t.me/DORBOT_22"
+                ><i class="fab fa-telegram-plane"></i
+              ></a>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" id="name" placeholder="Ваше ім'я" required />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Ваш email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  rows="5"
+                  placeholder="Ваше повідомлення"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn">Надіслати</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h3>Ebisu</h3>
+            <p>Ти носиш не просто коштовності, ти носиш моменти</p>
+          </div>
+          <div class="footer-col">
+            <h3>Меню</h3>
+            <ul>
+              <li><a href="#home">Головна</a></li>
+              <li><a href="#products">Наша продукція</a></li>
+              <li><a href="#contacts">Контакти</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Контакти</h3>
+            <p>м. Рівне, Рівненська обл.</p>
+            <p>artem999popov@gmail.com</p>
+            <p>+380 99 151 83 44</p>
+          </div>
+          <div class="footer-col">
+            <h3>Підписатись</h3>
+            <form class="subscribe-form">
+              <input type="email" placeholder="Ваш email" required />
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Ebisu. Всі права захищені за допомого GodHelp.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+      <div class="cart-header">
+        <h3>Ваше замовлення</h3>
+        <button class="close-cart">&times;</button>
+      </div>
+      <div class="cart-items" id="cart-items">
+        <!-- Cart items will be added here via JS -->
+      </div>
+      <div class="cart-total">
+        <p>Всього: <span id="cart-total">0</span></p>
+        <button class="btn">Оформити замовлення</button>
+      </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/sorting.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
